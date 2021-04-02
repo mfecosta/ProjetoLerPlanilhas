@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div><h2>Importação de scripts planilhas diversas</h2></div>
+        <div><h4>Carregue a planilha com os scripts </h4></div><br />
+        <input type="file" name="postedfile" />
+        <br />
+        <input type="submit" name="Import" />
+    }
+
+</div>

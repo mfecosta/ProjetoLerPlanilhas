@@ -1,0 +1,43 @@
+﻿@model ExecutarScripts.Models.FileUploadViewModel
+
+    <h1>Upload da Planilha de scripts</h1>
+
+<div class="form-group row">
+    <p>@Html.ValidationSummary(true)</p>
+    <form asp-action="Index" class="text-left" enctype="multipart/form-data">
+        <div class="form-group col-sm-12">
+            <div class="file-select-button" id="filename">Carregar planilha</div>
+            <input asp-for="Planilha" type="file" id="choosefile" />
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="form-group col-sm-6">
+            <button type="submit" class="btn btn-primary">Ler planilha</button>
+        </div>
+
+    </form>
+    <div class="row">
+        
+        <table class="table  table-active table-bordered" width="100%">
+            <thead>
+               <tr>
+                   <th>Linha de scripts</th>
+                   </tr>
+                </thead>
+            <tbody>
+                @foreach (var item in Model.StaffInfoViewModel.StaffList)
+                {
+                    <tr>
+                        <td>@item.Scripts</td>
+                    </tr>
+
+                }
+
+            </tbody>
+            </table>
+        </div>
+
+
+
+ </div>
