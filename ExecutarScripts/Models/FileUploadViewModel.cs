@@ -11,7 +11,7 @@ namespace ExecutarScripts.Models
     {
         [Required(ErrorMessage = "Carrega a planila !")]
         public IFormFile Planilha { get; set; }
-        [Required(ErrorMessage = "Carrega a planila !")]
+        [Required(ErrorMessage = "Carrega a planilha !")]
         public StaffInfoViewModel StaffInfoViewModel { get; set; }
 
         public FileUploadViewModel()
